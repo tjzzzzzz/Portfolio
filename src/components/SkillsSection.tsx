@@ -16,7 +16,9 @@ const SkillsSection: React.FC = () => {
     <section className="skills-section" id="skills">
       <div className="container">
         <div className="skills-content fade-in">
-          <h2 className="section-title">Skills & Tools</h2>
+          <div className="section-title-wrapper">
+            <h2 className="section-title">Skills & Tools</h2>
+          </div>
           <div className="skills-grid">
             <div className="skills-column">
               <h3 className="skills-category">Programming Languages</h3>
@@ -41,9 +43,9 @@ const SkillsSection: React.FC = () => {
           </div>
           <div className="skills-philosophy fade-in">
             <p>
-              I don't believe anyone becomes a 'perfect' programmer — and I'm no exception. 
-              What sets me apart is my dedication to learning and growing through real projects 
-              and constant practice.
+              I don't believe anyone becomes a <strong>'perfect' programmer</strong> — and I'm no exception. 
+              What sets me apart is my <strong>dedication to learning</strong> and <strong>growing</strong> through <strong>real projects</strong> 
+              and <strong>constant practice</strong>. I'm not afraid to <strong>fail</strong> and <strong>learn from my mistakes</strong>.
             </p>
           </div>
         </div>

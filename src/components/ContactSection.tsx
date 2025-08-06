@@ -6,7 +6,9 @@ const ContactSection: React.FC = () => {
     <section className="contact-section" id="contact">
       <div className="container">
         <div className="contact-content fade-in">
-          <h2 className="section-title">Contact Me</h2>
+          <div className="section-title-wrapper">
+            <h2 className="section-title">Contact Me</h2>
+          </div>
           <div className="contact-info">
             <div className="contact-item">
               <div className="contact-icon">💬</div>

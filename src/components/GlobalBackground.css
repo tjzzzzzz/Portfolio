@@ -1,0 +1,233 @@
+.global-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  background: var(--bg-primary);
+}
+
+/* Main gradient background */
+.global-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, var(--primary-purple-light) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, var(--accent-purple) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, var(--primary-purple) 0%, transparent 50%);
+  opacity: 0.08;
+  z-index: 0;
+}
+
+/* Additional subtle patterns */
+.global-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 90% 10%, var(--primary-purple-light) 0%, transparent 40%),
+    radial-gradient(circle at 10% 90%, var(--accent-purple) 0%, transparent 40%);
+  opacity: 0.04;
+  z-index: 1;
+}
+
+.floating-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-purple), var(--primary-purple-dark));
+  opacity: 0.06;
+  animation: float 12s ease-in-out infinite;
+  filter: blur(1px);
+}
+
+.floating-shape-1 {
+  width: 400px;
+  height: 400px;
+  top: 10%;
+  right: 10%;
+  animation-delay: 0s;
+  background: linear-gradient(135deg, var(--primary-purple-light), var(--primary-purple));
+}
+
+.floating-shape-2 {
+  width: 300px;
+  height: 300px;
+  bottom: 20%;
+  left: 5%;
+  animation-delay: 2s;
+  background: linear-gradient(135deg, var(--accent-purple), var(--primary-purple-light));
+}
+
+.floating-shape-3 {
+  width: 200px;
+  height: 200px;
+  top: 60%;
+  right: 20%;
+  animation-delay: 4s;
+  background: linear-gradient(135deg, var(--primary-purple), var(--accent-purple));
+}
+
+.floating-shape-4 {
+  width: 350px;
+  height: 350px;
+  top: 80%;
+  left: 15%;
+  animation-delay: 1s;
+  background: linear-gradient(135deg, var(--primary-purple-light), var(--primary-purple));
+}
+
+.floating-shape-5 {
+  width: 250px;
+  height: 250px;
+  top: 30%;
+  left: 25%;
+  animation-delay: 3s;
+  background: linear-gradient(135deg, var(--accent-purple), var(--primary-purple-light));
+}
+
+.floating-shape-6 {
+  width: 180px;
+  height: 180px;
+  bottom: 60%;
+  right: 5%;
+  animation-delay: 5s;
+  background: linear-gradient(135deg, var(--primary-purple), var(--accent-purple));
+}
+
+/* Add more floating shapes for richer background */
+.floating-shape-7 {
+  width: 120px;
+  height: 120px;
+  top: 15%;
+  left: 60%;
+  animation-delay: 6s;
+  background: linear-gradient(135deg, var(--primary-purple-light), var(--primary-purple));
+}
+
+.floating-shape-8 {
+  width: 280px;
+  height: 280px;
+  bottom: 10%;
+  right: 30%;
+  animation-delay: 7s;
+  background: linear-gradient(135deg, var(--accent-purple), var(--primary-purple-light));
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-15px) rotate(90deg) scale(1.05);
+  }
+  50% {
+    transform: translateY(-25px) rotate(180deg) scale(1.1);
+  }
+  75% {
+    transform: translateY(-15px) rotate(270deg) scale(1.05);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .floating-shape-1 {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .floating-shape-2 {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .floating-shape-3 {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .floating-shape-4 {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .floating-shape-5 {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .floating-shape-6 {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .floating-shape-7 {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .floating-shape-8 {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-shape-1 {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .floating-shape-2 {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .floating-shape-3 {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .floating-shape-4 {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .floating-shape-5 {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .floating-shape-6 {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .floating-shape-7 {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .floating-shape-8 {
+    width: 100px;
+    height: 100px;
+  }
+} 
