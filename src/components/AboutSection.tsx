@@ -1,6 +1,5 @@
 import React from 'react';
 import './AboutSection.css';
-
 const AboutSection: React.FC = () => {
   return (
     <section className="about-section" id="about">
@@ -26,5 +25,4 @@ const AboutSection: React.FC = () => {
     </section>
   );
 };
-
 export default AboutSection; 

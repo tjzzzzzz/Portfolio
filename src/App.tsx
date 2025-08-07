@@ -12,16 +12,13 @@ import Footer from './components/Footer';
 import ThemeToggle from './components/ThemeToggle';
 import ScrollToTop from './components/ScrollToTop';
 import './App.css';
-
 function AppContent() {
   const location = useLocation();
-
   useEffect(() => {
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
     };
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -29,13 +26,10 @@ function AppContent() {
         }
       });
     }, observerOptions);
-
     const fadeElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .fade-in-up, .scale-in, .stagger-item');
     fadeElements.forEach(el => observer.observe(el));
-
     return () => observer.disconnect();
-  }, [location.pathname]); // Re-run when location changes
-
+  }, [location.pathname]);
   return (
     <div className="App">
       <GlobalBackground />
@@ -73,7 +67,6 @@ function AppContent() {
     </div>
   );
 }
-
 function App() {
   return (
     <ThemeProvider>
@@ -83,5 +76,4 @@ function App() {
     </ThemeProvider>
   );
 }
-
 export default App; 

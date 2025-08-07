@@ -1,17 +1,14 @@
 import React from 'react';
 import './SkillsSection.css';
-
 const SkillsSection: React.FC = () => {
   const programmingLanguages = [
     'Java', 'JavaScript', 'Lua', 'C# (Still Learning)', 
     'SourcePawn', 'SQL (Basic–Intermediate)', 'Python', 'HTML/CSS'
   ];
-
   const toolsAndTech = [
     'MongoDB', 'Redis', 'Paper API', 
     'Networking Protocols', 'Backend/Server Management'
   ];
-
   return (
     <section className="skills-section" id="skills">
       <div className="container">
@@ -53,5 +50,4 @@ const SkillsSection: React.FC = () => {
     </section>
   );
 };
-
 export default SkillsSection; 

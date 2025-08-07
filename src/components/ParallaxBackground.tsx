@@ -1,31 +1,24 @@
 import React, { useEffect, useRef } from 'react';
-
 interface ParallaxBackgroundProps {
   speed?: number;
   children?: React.ReactNode;
 }
-
 const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({ 
   speed = 0.5, 
   children 
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
-
     const handleScroll = () => {
       const scrolled = window.pageYOffset;
       const rate = scrolled * speed;
-      
       container.style.transform = `translateY(${rate}px)`;
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [speed]);
-
   return (
     <div 
       ref={containerRef}
@@ -44,5 +37,4 @@ const ParallaxBackground: React.FC<ParallaxBackgroundProps> = ({
     </div>
   );
 };
-
 export default ParallaxBackground; 

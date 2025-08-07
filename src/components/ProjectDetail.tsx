@@ -1,7 +1,5 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useTheme } from '../contexts/ThemeContext';
-
 interface Project {
   id: string;
   title: string;
@@ -9,16 +7,13 @@ interface Project {
   details: string;
   links?: { text: string; url: string }[];
   status: 'current' | 'completed' | 'learning';
-  image?: string;        // Single project image
-  category?: string;     // Optional category
+  image?: string;
+  category?: string;
 }
-
 const ProjectDetail: React.FC = () => {
   const { projectId } = useParams<{ projectId: string }>();
   const navigate = useNavigate();
-  const { isDarkMode } = useTheme();
 
-  // Simplified project data - matches ProjectsSection
   const projects: { [key: string]: Project } = {
     'pvpland': {
       id: 'pvpland',
@@ -104,21 +99,10 @@ const ProjectDetail: React.FC = () => {
       category: 'Game Development'
     }
   };
-
   const project = projectId ? projects[projectId] : null;
-
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [projectId]);
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'current': return 'var(--current)';
-      case 'completed': return 'var(--success)';
-      case 'learning': return 'var(--warning)';
-      default: return 'var(--text-muted)';
-    }
-  };
 
   const getStatusText = (status: string) => {
     switch (status) {
@@ -128,10 +112,8 @@ const ProjectDetail: React.FC = () => {
       default: return 'Unknown';
     }
   };
-
   const handleBackToProjects = () => {
     navigate('/', { replace: true });
-    // Scroll to projects section after navigation
     setTimeout(() => {
       const projectsSection = document.getElementById('projects');
       if (projectsSection) {
@@ -142,7 +124,6 @@ const ProjectDetail: React.FC = () => {
       }
     }, 100);
   };
-
   if (!project) {
     return (
       <div style={{ 
@@ -174,7 +155,6 @@ const ProjectDetail: React.FC = () => {
       </div>
     );
   }
-
   return (
     <div style={{ 
       minHeight: '100vh', 
@@ -191,7 +171,6 @@ const ProjectDetail: React.FC = () => {
           border: '1px solid var(--border-color)',
           overflow: 'hidden'
         }}>
-          {/* Header */}
           <div style={{ 
             padding: '2rem',
             borderBottom: '1px solid var(--border-color)',
@@ -199,7 +178,6 @@ const ProjectDetail: React.FC = () => {
             position: 'relative',
             overflow: 'hidden'
           }}>
-            {/* Background pattern */}
             <div style={{
               position: 'absolute',
               top: 0,
@@ -216,7 +194,6 @@ const ProjectDetail: React.FC = () => {
             >
               ← Back to Projects
             </button>
-            
             <div style={{ 
               display: 'flex', 
               alignItems: 'center', 
@@ -238,7 +215,6 @@ const ProjectDetail: React.FC = () => {
                   }}
                 />
               )}
-              
               <div style={{ flex: '1', minWidth: '0' }}>
                 <h1 style={{ 
                   fontSize: '2.5rem', 
@@ -276,14 +252,11 @@ const ProjectDetail: React.FC = () => {
               </div>
             </div>
           </div>
-
-          {/* Content */}
           <div style={{ 
             padding: '2rem',
             background: 'var(--bg-primary)',
             position: 'relative'
           }}>
-            {/* Subtle background pattern */}
             <div style={{
               position: 'absolute',
               top: 0,
@@ -317,8 +290,6 @@ const ProjectDetail: React.FC = () => {
                 {project.details}
               </p>
             </div>
-
-            {/* Links */}
             {project.links && project.links.length > 0 && (
               <div style={{ position: 'relative', zIndex: 1 }}>
                 <h2 style={{ 
@@ -354,5 +325,4 @@ const ProjectDetail: React.FC = () => {
     </div>
   );
 };
-
 export default ProjectDetail; 

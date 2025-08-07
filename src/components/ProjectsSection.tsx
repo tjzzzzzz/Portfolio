@@ -2,7 +2,6 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import TiltCard from './TiltCard';
 import './ProjectsSection.css';
-
 interface Project {
   id: string;
   title: string;
@@ -10,15 +9,11 @@ interface Project {
   details: string;
   links?: { text: string; url: string }[];
   status: 'current' | 'completed' | 'learning';
-  // Simple media properties
-  image?: string;        // Single project image (logo, screenshot, or thumbnail)
-  category?: string;     // Optional category for grouping
+  image?: string;
+  category?: string;
 }
-
 const ProjectsSection: React.FC = () => {
   const navigate = useNavigate();
-
-  // Simplified project data - much easier to add to
   const projects: Project[] = [
     {
       id: 'lagscope',
@@ -31,11 +26,9 @@ const ProjectsSection: React.FC = () => {
       category: 'Minecraft'
     }
   ];
-
   const handleProjectClick = (projectId: string) => {
     navigate(`/projects/${projectId}`);
   };
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'current': return 'var(--current)';
@@ -44,7 +37,6 @@ const ProjectsSection: React.FC = () => {
       default: return 'var(--text-muted)';
     }
   };
-
   const getStatusText = (status: string) => {
     switch (status) {
       case 'current': return 'Current';
@@ -53,8 +45,6 @@ const ProjectsSection: React.FC = () => {
       default: return 'Unknown';
     }
   };
-
-  // Group projects by category
   const groupedProjects = projects.reduce((acc, project) => {
     const category = project.category || 'Other';
     if (!acc[category]) {
@@ -63,7 +53,6 @@ const ProjectsSection: React.FC = () => {
     acc[category].push(project);
     return acc;
   }, {} as Record<string, Project[]>);
-
   return (
     <section className="projects-section" id="projects">
       <div className="container">
@@ -74,7 +63,6 @@ const ProjectsSection: React.FC = () => {
           <p className="section-subtitle">
             A collection of my work across different technologies and platforms
           </p>
-          
           <div className="projects-grid">
             {Object.entries(groupedProjects).map(([category, categoryProjects], categoryIndex) => (
               <div key={category} className="category-section">
@@ -95,11 +83,9 @@ const ProjectsSection: React.FC = () => {
                           animationDelay: `${(categoryIndex * 0.2) + (projectIndex * 0.1)}s`
                         }}
                       >
-                        {/* Project Header - Enhanced */}
                         <div className="project-header-section">
-                          {/* Background pattern */}
                           <div className="project-header-pattern" />
-                          
+                          <div className="project-header-pattern" />
                           <div className="project-header-content">
                             <div className="project-header-main">
                               {project.image && (
@@ -110,7 +96,6 @@ const ProjectsSection: React.FC = () => {
                                   loading="lazy"
                                 />
                               )}
-                              
                               <div className="project-header-text">
                                 <h4 className="project-title">{project.title}</h4>
                                 <p className="project-description">{project.description}</p>
@@ -124,16 +109,11 @@ const ProjectsSection: React.FC = () => {
                             </div>
                           </div>
                         </div>
-
-                        {/* Project Content - Enhanced */}
                         <div className="project-content-section">
-                          {/* Subtle background pattern */}
                           <div className="project-content-pattern" />
-                          
+                          <div className="project-content-pattern" />
                           <div className="project-content-main">
                             <p className="project-details">{project.details}</p>
-                            
-                            {/* Project Links - Enhanced */}
                             {project.links && project.links.length > 0 && (
                               <div className="project-links">
                                 {project.links.slice(0, 2).map((link, index) => (
@@ -178,5 +158,4 @@ const ProjectsSection: React.FC = () => {
     </section>
   );
 };
-
 export default ProjectsSection; 

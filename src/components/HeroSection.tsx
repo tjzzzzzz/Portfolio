@@ -3,32 +3,26 @@ import './HeroSection.css';
 import TypewriterText from './TypewriterText';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { useMagneticEffect } from '../hooks/useMagneticEffect';
-
 const HeroSection: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver({
     threshold: 0.1,
     rootMargin: '-50px',
   });
-
   const magneticRef = useMagneticEffect<HTMLButtonElement>({ strength: 0.2, distance: 150 });
   const magneticRefContact = useMagneticEffect<HTMLButtonElement>({ strength: 0.2, distance: 150 });
   const [showSecondLine, setShowSecondLine] = useState(false);
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
-  // Show second line after first line completes (approximately 7 chars * 80ms = 560ms + buffer)
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSecondLine(true);
     }, 800);
     return () => clearTimeout(timer);
   }, []);
-
   return (
     <section className="hero-section" ref={elementRef}>
       <div className="container">
@@ -75,5 +69,4 @@ const HeroSection: React.FC = () => {
     </section>
   );
 };
-
 export default HeroSection; 

@@ -4,21 +4,18 @@
   position: relative;
   overflow: hidden;
 }
-
 .skills-content {
   max-width: 1100px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
 }
-
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3.5rem;
   margin-bottom: 4rem;
 }
-
 .skills-column {
   background: #1e293b;
   padding: 3rem;
@@ -32,7 +29,6 @@
   overflow: hidden;
   backdrop-filter: blur(16px);
 }
-
 .skills-column::before {
   content: '';
   position: absolute;
@@ -44,11 +40,9 @@
   transform: scaleX(0);
   transition: transform 0.5s ease;
 }
-
 .skills-column:hover::before {
   transform: scaleX(1);
 }
-
 .skills-column:hover {
   transform: translateY(-6px);
   box-shadow: 
@@ -56,7 +50,6 @@
     0 12px 32px rgba(102, 126, 234, 0.12);
   border-color: rgba(102, 126, 234, 0.4);
 }
-
 .skills-category {
   font-size: 2.2rem;
   font-weight: 700;
@@ -71,8 +64,6 @@
     0 2px 4px rgba(0, 0, 0, 0.1),
     0 4px 8px rgba(102, 126, 234, 0.15);
 }
-
-/* Add decorative underline for skills categories */
 .skills-category::after {
   content: '';
   position: absolute;
@@ -86,8 +77,6 @@
   opacity: 0.6;
   transition: all 0.3s ease;
 }
-
-/* Add subtle glow effect */
 .skills-category::before {
   content: '';
   position: absolute;
@@ -101,33 +90,25 @@
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
-/* Hover effects for interactivity */
 .skills-category:hover::after {
   width: 70px;
   opacity: 1;
   box-shadow: 0 0 12px rgba(102, 126, 234, 0.25);
 }
-
 .skills-category:hover::before {
   opacity: 1;
 }
-
-/* Add subtle animation on page load */
 .skills-category {
   animation: skillsCategorySlideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   opacity: 0;
   transform: translateY(10px);
 }
-
 @keyframes skillsCategorySlideIn {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
-/* Enhanced gradient text effect with better contrast */
 .skills-category {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
   background-size: 200% 200%;
@@ -137,18 +118,15 @@
   animation: skillsCategorySlideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards, 
              gradientShift 4s ease-in-out infinite;
 }
-
 .skills-list {
   display: flex;
   flex-wrap: wrap;
   gap: 1.2rem;
   justify-content: center;
 }
-
 .skill-item {
   display: inline-block;
 }
-
 .skill-badge {
   display: inline-block;
   padding: 0.9rem 1.8rem;
@@ -163,7 +141,6 @@
   overflow: hidden;
   cursor: pointer;
 }
-
 .skill-badge::before {
   content: '';
   position: absolute;
@@ -174,11 +151,9 @@
   background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.15), transparent);
   transition: left 0.6s;
 }
-
 .skill-badge:hover::before {
   left: 100%;
 }
-
 .skill-badge:hover {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -186,7 +161,6 @@
   box-shadow: 0 12px 32px rgba(102, 126, 234, 0.3);
   border-color: transparent;
 }
-
 .skills-philosophy {
   text-align: center;
   max-width: 800px;
@@ -202,7 +176,6 @@
   overflow: hidden;
   backdrop-filter: blur(16px);
 }
-
 .skills-philosophy::before {
   content: '';
   position: absolute;
@@ -212,7 +185,6 @@
   height: 100%;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
-
 .skills-philosophy p {
   font-size: 1.2rem;
   line-height: 1.8;
@@ -223,8 +195,6 @@
   z-index: 1;
   font-weight: 500;
 }
-
-/* Highlight key phrases - same as About section */
 .skills-philosophy p strong {
   color: #667eea;
   font-weight: 700;
@@ -240,59 +210,47 @@
   display: inline-block;
   position: relative;
 }
-
-/* Animation for skills */
 .skills-column {
   animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   opacity: 0;
   transform: translateY(40px);
 }
-
 .skills-column:nth-child(1) { animation-delay: 0.2s; }
 .skills-column:nth-child(2) { animation-delay: 0.4s; }
-
 .skills-philosophy {
   animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   opacity: 0;
   transform: translateY(40px);
   animation-delay: 0.6s;
 }
-
 @keyframes fadeInUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
 @media (max-width: 768px) {
   .skills-section {
     padding: 4rem 0;
   }
-  
   .skills-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
-  
   .skills-column {
     padding: 2.5rem;
   }
-  
   .skills-category {
     font-size: 1.9rem;
     margin-bottom: 2.5rem;
   }
-  
   .skill-badge {
     font-size: 0.95rem;
     padding: 0.8rem 1.5rem;
   }
-  
   .skills-philosophy {
     padding: 2.5rem;
   }
-  
   .skills-philosophy p {
     font-size: 1.1rem;
   }

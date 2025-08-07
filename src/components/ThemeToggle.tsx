@@ -1,10 +1,8 @@
 import React from 'react';
 import { useTheme } from '../contexts/ThemeContext';
 import './ThemeToggle.css';
-
 const ThemeToggle: React.FC = () => {
   const { isDarkMode, toggleDarkMode } = useTheme();
-
   return (
     <button 
       className="theme-toggle" 
@@ -31,5 +29,4 @@ const ThemeToggle: React.FC = () => {
     </button>
   );
 };
-
 export default ThemeToggle; 

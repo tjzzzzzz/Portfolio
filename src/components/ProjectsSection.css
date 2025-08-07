@@ -4,28 +4,22 @@
   position: relative;
   overflow: hidden;
 }
-
 .projects-content {
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
 }
-
 .projects-grid {
   display: flex;
   flex-direction: column;
   gap: 5rem;
 }
-
-/* Category Section */
 .category-section {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
-
-/* Enhanced Category Title with Better Visual Hierarchy - Left Aligned */
 .category-title {
   font-size: 2.2rem;
   font-weight: 700;
@@ -41,8 +35,6 @@
     0 2px 4px rgba(0, 0, 0, 0.1),
     0 4px 8px rgba(102, 126, 234, 0.15);
 }
-
-/* Add decorative underline for category titles - Left aligned */
 .category-title::after {
   content: '';
   position: absolute;
@@ -56,8 +48,6 @@
   opacity: 0.7;
   transition: all 0.3s ease;
 }
-
-/* Add subtle glow effect - Left aligned */
 .category-title::before {
   content: '';
   position: absolute;
@@ -71,33 +61,25 @@
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
-/* Hover effects for interactivity - Left aligned */
 .category-title:hover::after {
   width: 90px;
   opacity: 1;
   box-shadow: 0 0 15px rgba(102, 126, 234, 0.3);
 }
-
 .category-title:hover::before {
   opacity: 1;
 }
-
-/* Add subtle animation on page load */
 .category-title {
   animation: categoryTitleSlideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   opacity: 0;
   transform: translateY(15px);
 }
-
 @keyframes categoryTitleSlideIn {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
-/* Enhanced gradient text effect with better contrast */
 .category-title {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
   background-size: 200% 200%;
@@ -107,21 +89,15 @@
   animation: categoryTitleSlideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards, 
              gradientShift 4s ease-in-out infinite;
 }
-
-/* Projects Row */
 .projects-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 3rem;
   justify-items: center;
 }
-
-/* When there's only one project in a category, limit its width */
 .projects-row:has(.project-card:only-child) {
   grid-template-columns: minmax(450px, 700px);
 }
-
-/* Project Card - Enhanced Design */
 .project-card {
   background: #1e293b;
   border: 1px solid rgba(102, 126, 234, 0.2);
@@ -138,12 +114,9 @@
     0 8px 32px rgba(102, 126, 234, 0.08),
     0 4px 16px rgba(102, 126, 234, 0.04);
 }
-
-/* Keep LagScope project with original background */
 .project-card[data-project-id="lagscope"] {
   background: var(--bg-primary);
 }
-
 .project-card::before {
   content: '';
   position: absolute;
@@ -156,11 +129,9 @@
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 2;
 }
-
 .project-card:hover::before {
   transform: scaleX(1);
 }
-
 .project-card::after {
   content: '';
   position: absolute;
@@ -173,11 +144,9 @@
   transition: opacity 0.4s ease;
   pointer-events: none;
 }
-
 .project-card:hover::after {
   opacity: 1;
 }
-
 .project-card:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 
@@ -186,8 +155,6 @@
     0 0 0 1px rgba(102, 126, 234, 0.2);
   border-color: rgba(102, 126, 234, 0.4);
 }
-
-/* Project Header Section - Enhanced */
 .project-header-section {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   position: relative;
@@ -195,7 +162,6 @@
   padding: 2.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 .project-header-section::before {
   content: '';
   position: absolute;
@@ -209,7 +175,6 @@
   pointer-events: none;
   z-index: 0;
 }
-
 .project-header-pattern {
   position: absolute;
   top: 0;
@@ -223,24 +188,20 @@
   pointer-events: none;
   z-index: 1;
 }
-
 @keyframes shimmer {
   0%, 100% { background-position: -200% -200%; }
   50% { background-position: 200% 200%; }
 }
-
 .project-header-content {
   position: relative;
   z-index: 2;
 }
-
 .project-header-main {
   display: flex;
   align-items: center;
   gap: 1.8rem;
   flex-wrap: wrap;
 }
-
 .project-logo {
   width: 70px;
   height: 70px;
@@ -253,19 +214,16 @@
   border: 2px solid rgba(248,250,252,0.2);
   transition: all 0.4s ease;
 }
-
 .project-card:hover .project-logo {
   transform: scale(1.15) rotate(5deg);
   box-shadow: 
     0 16px 40px rgba(0,0,0,0.4),
     0 8px 20px rgba(0,0,0,0.3);
 }
-
 .project-header-text {
   flex: 1;
   min-width: 0;
 }
-
 .project-title {
   font-size: 1.6rem;
   font-weight: 800;
@@ -279,7 +237,6 @@
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
   letter-spacing: -0.01em;
 }
-
 .project-description {
   color: rgba(255,255,255,0.95);
   font-size: 1.05rem;
@@ -292,7 +249,6 @@
     0 1px 2px rgba(0,0,0,0.2);
   filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
 }
-
 .project-status {
   padding: 0.5rem 1.2rem;
   border-radius: 1.5rem;
@@ -311,15 +267,12 @@
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
   transition: all 0.3s ease;
 }
-
 .project-card:hover .project-status {
   transform: translateY(-2px);
   box-shadow: 
     0 6px 20px rgba(0,0,0,0.5),
     0 3px 10px rgba(0,0,0,0.4);
 }
-
-/* Project Content Section - Enhanced */
 .project-content-section {
   padding: 2.5rem;
   background: var(--bg-secondary);
@@ -328,7 +281,6 @@
   display: flex;
   flex-direction: column;
 }
-
 .project-content-pattern {
   position: absolute;
   top: 0;
@@ -342,11 +294,9 @@
   pointer-events: none;
   transition: opacity 0.4s ease;
 }
-
 .project-card:hover .project-content-pattern {
   opacity: 1;
 }
-
 .project-content-main {
   position: relative;
   z-index: 1;
@@ -354,7 +304,6 @@
   display: flex;
   flex-direction: column;
 }
-
 .project-details {
   color: var(--text-secondary);
   line-height: 1.8;
@@ -364,19 +313,15 @@
   flex: 1;
   transition: color 0.3s ease;
 }
-
 .project-card:hover .project-details {
   color: var(--text-primary);
 }
-
-/* Project Links - Enhanced */
 .project-links {
   display: flex;
   flex-wrap: wrap;
   gap: 1.2rem;
   margin-top: auto;
 }
-
 .project-link {
   display: inline-flex;
   align-items: center;
@@ -394,12 +339,10 @@
   overflow: hidden;
   letter-spacing: 0.3px;
 }
-
 .project-link svg {
   transition: transform 0.3s ease;
   opacity: 0.7;
 }
-
 .project-link::before {
   content: '';
   position: absolute;
@@ -410,11 +353,9 @@
   background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.15), transparent);
   transition: left 0.6s ease;
 }
-
 .project-link:hover::before {
   left: 100%;
 }
-
 .project-link:hover {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: var(--white);
@@ -424,119 +365,93 @@
     0 6px 20px rgba(102, 126, 234, 0.2);
   border-color: transparent;
 }
-
 .project-link:hover svg {
   transform: translateX(2px) translateY(-1px);
   opacity: 1;
 }
-
-/* Enhanced Animation for cards */
 .project-card {
   animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   opacity: 0;
   transform: translateY(60px);
 }
-
 .project-card:nth-child(1) { animation-delay: 0.1s; }
 .project-card:nth-child(2) { animation-delay: 0.2s; }
 .project-card:nth-child(3) { animation-delay: 0.3s; }
 .project-card:nth-child(4) { animation-delay: 0.4s; }
 .project-card:nth-child(5) { animation-delay: 0.5s; }
 .project-card:nth-child(6) { animation-delay: 0.6s; }
-
 @keyframes fadeInUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
-/* Responsive Design */
 @media (max-width: 768px) {
   .projects-section {
     padding: 4rem 0;
   }
-  
   .projects-grid {
     gap: 4rem;
   }
-  
   .category-section {
     gap: 2.5rem;
   }
-  
   .category-title {
     font-size: 2.2rem;
     margin-bottom: 2rem;
   }
-  
   .projects-row {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
-  
   .project-header-section {
     padding: 2rem;
   }
-  
   .project-content-section {
     padding: 2rem;
   }
-  
   .project-header-main {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.2rem;
   }
-  
   .project-logo {
     width: 60px;
     height: 60px;
   }
-  
   .project-title {
     font-size: 1.4rem;
   }
-  
   .project-description {
     font-size: 1rem;
   }
-  
   .project-details {
     font-size: 0.95rem;
   }
-  
   .project-links {
     flex-direction: column;
   }
-  
   .project-link {
     justify-content: center;
     font-size: 0.85rem;
   }
 }
-
 @media (max-width: 480px) {
   .project-header-section {
     padding: 1.5rem;
   }
-  
   .project-content-section {
     padding: 1.5rem;
   }
-  
   .project-title {
     font-size: 1.3rem;
   }
-  
   .project-description {
     font-size: 0.9rem;
   }
-  
   .project-details {
     font-size: 0.9rem;
   }
-  
   .category-title {
     font-size: 1.8rem;
   }

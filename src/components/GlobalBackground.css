@@ -9,8 +9,6 @@
   overflow: hidden;
   background: var(--bg-primary);
 }
-
-/* Main gradient background */
 .global-background::before {
   content: '';
   position: absolute;
@@ -25,8 +23,6 @@
   opacity: 0.08;
   z-index: 0;
 }
-
-/* Additional subtle patterns */
 .global-background::after {
   content: '';
   position: absolute;
@@ -40,7 +36,6 @@
   opacity: 0.04;
   z-index: 1;
 }
-
 .floating-shapes {
   position: absolute;
   top: 0;
@@ -49,7 +44,6 @@
   bottom: 0;
   z-index: 2;
 }
-
 .floating-shape {
   position: absolute;
   border-radius: 50%;
@@ -58,7 +52,6 @@
   animation: float 12s ease-in-out infinite;
   filter: blur(1px);
 }
-
 .floating-shape-1 {
   width: 400px;
   height: 400px;
@@ -67,7 +60,6 @@
   animation-delay: 0s;
   background: linear-gradient(135deg, var(--primary-purple-light), var(--primary-purple));
 }
-
 .floating-shape-2 {
   width: 300px;
   height: 300px;
@@ -76,7 +68,6 @@
   animation-delay: 2s;
   background: linear-gradient(135deg, var(--accent-purple), var(--primary-purple-light));
 }
-
 .floating-shape-3 {
   width: 200px;
   height: 200px;
@@ -85,7 +76,6 @@
   animation-delay: 4s;
   background: linear-gradient(135deg, var(--primary-purple), var(--accent-purple));
 }
-
 .floating-shape-4 {
   width: 350px;
   height: 350px;
@@ -94,7 +84,6 @@
   animation-delay: 1s;
   background: linear-gradient(135deg, var(--primary-purple-light), var(--primary-purple));
 }
-
 .floating-shape-5 {
   width: 250px;
   height: 250px;
@@ -103,7 +92,6 @@
   animation-delay: 3s;
   background: linear-gradient(135deg, var(--accent-purple), var(--primary-purple-light));
 }
-
 .floating-shape-6 {
   width: 180px;
   height: 180px;
@@ -112,8 +100,6 @@
   animation-delay: 5s;
   background: linear-gradient(135deg, var(--primary-purple), var(--accent-purple));
 }
-
-/* Add more floating shapes for richer background */
 .floating-shape-7 {
   width: 120px;
   height: 120px;
@@ -122,7 +108,6 @@
   animation-delay: 6s;
   background: linear-gradient(135deg, var(--primary-purple-light), var(--primary-purple));
 }
-
 .floating-shape-8 {
   width: 280px;
   height: 280px;
@@ -131,7 +116,6 @@
   animation-delay: 7s;
   background: linear-gradient(135deg, var(--accent-purple), var(--primary-purple-light));
 }
-
 @keyframes float {
   0%, 100% {
     transform: translateY(0px) rotate(0deg) scale(1);
@@ -146,86 +130,69 @@
     transform: translateY(-15px) rotate(270deg) scale(1.05);
   }
 }
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .floating-shape-1 {
     width: 250px;
     height: 250px;
   }
-  
   .floating-shape-2 {
     width: 200px;
     height: 200px;
   }
-  
   .floating-shape-3 {
     width: 150px;
     height: 150px;
   }
-  
   .floating-shape-4 {
     width: 220px;
     height: 220px;
   }
-  
   .floating-shape-5 {
     width: 180px;
     height: 180px;
   }
-  
   .floating-shape-6 {
     width: 120px;
     height: 120px;
   }
-  
   .floating-shape-7 {
     width: 80px;
     height: 80px;
   }
-  
   .floating-shape-8 {
     width: 160px;
     height: 160px;
   }
 }
-
 @media (max-width: 480px) {
   .floating-shape-1 {
     width: 180px;
     height: 180px;
   }
-  
   .floating-shape-2 {
     width: 140px;
     height: 140px;
   }
-  
   .floating-shape-3 {
     width: 100px;
     height: 100px;
   }
-  
   .floating-shape-4 {
     width: 160px;
     height: 160px;
   }
-  
   .floating-shape-5 {
     width: 120px;
     height: 120px;
   }
-  
   .floating-shape-6 {
     width: 80px;
     height: 80px;
   }
-  
   .floating-shape-7 {
     width: 60px;
     height: 60px;
   }
-  
   .floating-shape-8 {
     width: 100px;
     height: 100px;

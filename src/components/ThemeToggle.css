@@ -16,21 +16,17 @@
   z-index: 1000;
   box-shadow: var(--shadow);
 }
-
 .theme-toggle:hover {
   background: var(--primary-purple-dark);
   transform: scale(1.1);
   box-shadow: var(--shadow-lg);
 }
-
 .theme-toggle svg {
   transition: transform 0.3s ease;
 }
-
 .theme-toggle:hover svg {
   transform: rotate(180deg);
 }
-
 @media (max-width: 768px) {
   .theme-toggle {
     bottom: 1rem;

@@ -3,11 +3,9 @@
   padding: 2rem 0;
   border-top: 1px solid var(--medium-gray);
 }
-
 .footer-content {
   text-align: center;
 }
-
 .footer-content p {
   color: var(--text-light);
   margin: 0;

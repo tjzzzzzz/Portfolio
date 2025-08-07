@@ -1,10 +1,8 @@
 import React from 'react';
-
 interface LoadingSpinnerProps {
   size?: 'small' | 'medium' | 'large';
   color?: string;
 }
-
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'medium', 
   color = 'var(--primary-purple)' 
@@ -14,7 +12,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     medium: '40px',
     large: '60px'
   };
-
   return (
     <div className="loading-spinner" style={{ width: sizeMap[size], height: sizeMap[size] }}>
       <div 
@@ -24,5 +21,4 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     </div>
   );
 };
-
 export default LoadingSpinner; 

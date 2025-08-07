@@ -1,6 +1,5 @@
 import React from 'react';
 import './ContactSection.css';
-
 const ContactSection: React.FC = () => {
   return (
     <section className="contact-section" id="contact">
@@ -23,5 +22,4 @@ const ContactSection: React.FC = () => {
     </section>
   );
 };
-
 export default ContactSection; 

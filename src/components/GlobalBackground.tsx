@@ -1,7 +1,6 @@
 import React from 'react';
 import ParticleBackground from './ParticleBackground';
 import './GlobalBackground.css';
-
 const GlobalBackground: React.FC = () => {
   return (
     <div className="global-background">
@@ -19,5 +18,4 @@ const GlobalBackground: React.FC = () => {
     </div>
   );
 };
-
 export default GlobalBackground; 

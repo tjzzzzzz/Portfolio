@@ -1,33 +1,24 @@
 .App {
   min-height: 100vh;
 }
-
-/* Smooth scrolling for anchor links */
 html {
   scroll-behavior: smooth;
 }
-
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
-
 ::-webkit-scrollbar-track {
   background: var(--bg-secondary);
   border-radius: 5px;
 }
-
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 5px;
   border: 2px solid var(--bg-secondary);
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
 }
-
-/* Enhanced Title System with Better Visual Hierarchy */
 .section-title {
   font-size: 2.8rem;
   font-weight: 800;
@@ -53,8 +44,6 @@ html {
   transform: translateY(20px);
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
-
-/* Bottom underline decoration */
 .section-title::after {
   content: '';
   position: absolute;
@@ -68,8 +57,6 @@ html {
   opacity: 0.8;
   transition: all 0.3s ease;
 }
-
-/* Subtle background glow effect */
 .section-title::before {
   content: '';
   position: absolute;
@@ -83,33 +70,25 @@ html {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
-/* Enhanced hover effects */
 .section-title:hover::before {
   opacity: 1;
 }
-
 .section-title:hover::after {
   width: 120px;
   opacity: 1;
   box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
 }
-
 @keyframes titleSlideIn {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
-/* Title wrapper for additional decorative elements */
 .section-title-wrapper {
   position: relative;
   display: inline-block;
   width: 100%;
 }
-
-/* Corner decorations using wrapper */
 .section-title-wrapper::before,
 .section-title-wrapper::after {
   content: '';
@@ -122,24 +101,18 @@ html {
   opacity: 0.6;
   transition: all 0.3s ease;
 }
-
 .section-title-wrapper::before {
   left: -1rem;
 }
-
 .section-title-wrapper::after {
   right: -1rem;
 }
-
-/* Hover effects for corner decorations */
 .section-title-wrapper:hover::before,
 .section-title-wrapper:hover::after {
   transform: scale(1.2);
   opacity: 1;
   box-shadow: 0 0 10px rgba(102, 126, 234, 0.4);
 }
-
-/* Enhanced gradient text effect with better contrast */
 .section-title {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
   background-size: 200% 200%;
@@ -149,12 +122,10 @@ html {
   animation: titleSlideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards, 
              gradientShift 4s ease-in-out infinite;
 }
-
 @keyframes gradientShift {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
 }
-
 .section-subtitle {
   font-size: 1.2rem;
   color: var(--text-secondary);
@@ -166,76 +137,58 @@ html {
   line-height: 1.6;
   font-weight: 500;
 }
-
-/* Container styles */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
-
-/* Mobile responsiveness improvements */
 @media (max-width: 768px) {
   .container {
     padding: 0 1rem;
   }
-  
   .section-title {
     font-size: 2.2rem;
     margin-bottom: 1.2rem;
   }
-  
   .section-title::after {
     width: 60px;
     height: 3px;
   }
-  
   .section-title:hover::after {
     width: 80px;
   }
-  
   .section-subtitle {
     font-size: 1.1rem;
     margin-bottom: 2.5rem;
   }
 }
-
-/* Mobile responsiveness improvements */
 @media (max-width: 768px) {
   .container {
     padding: 0 1rem;
   }
-  
   .section-title {
     font-size: 2.2rem;
     margin-bottom: 1.2rem;
   }
-  
   .section-title::after {
     width: 60px;
     height: 3px;
   }
-  
   .section-title:hover::after {
     width: 80px;
   }
-  
   .section-subtitle {
     font-size: 1.1rem;
     margin-bottom: 2.5rem;
   }
-  
-  /* Adjust corner decorations for mobile */
   .section-title-wrapper::before,
   .section-title-wrapper::after {
     width: 0.4rem;
     height: 0.4rem;
   }
-  
   .section-title-wrapper::before {
     left: -0.8rem;
   }
-  
   .section-title-wrapper::after {
     right: -0.8rem;
   }

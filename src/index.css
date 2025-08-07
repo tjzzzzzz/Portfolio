@@ -3,97 +3,67 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 :root {
-  /* Modern Purple Color Palette */
   --primary-purple: #8b5cf6;
   --primary-purple-dark: #7c3aed;
   --primary-purple-light: #a78bfa;
   --accent-purple: #c084fc;
   --purple-gradient: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #6d28d9 100%);
   --purple-gradient-hover: linear-gradient(135deg, #7c3aed 0%, #6d28d9 50%, #5b21b6 100%);
-  
-  /* Neutral Colors */
   --bg-primary: #f8fafc;
   --bg-secondary: #f1f5f9;
   --bg-tertiary: #e2e8f0;
   --border-color: #cbd5e1;
-  
-  /* Text Colors */
   --text-primary: #1e293b;
   --text-secondary: #64748b;
   --text-muted: #94a3b8;
-  
-  /* Status Colors */
   --success: #10b981;
   --warning: #f59e0b;
   --current: #8b5cf6;
-  
-  /* White Color */
   --white: #ffffff;
-  
-  /* Legacy Color Variables (for compatibility) */
   --light-gray: var(--bg-secondary);
   --medium-gray: var(--border-color);
   --text-dark: var(--text-primary);
   --text-light: var(--text-secondary);
-  
-  /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  
-  /* Glass Effect */
   --glass-bg: rgba(248, 250, 252, 0.1);
   --glass-border: rgba(248, 250, 252, 0.2);
   --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
-
 [data-theme="dark"] {
-  /* Dark Mode Purple Palette */
   --primary-purple: #a78bfa;
   --primary-purple-dark: #8b5cf6;
   --primary-purple-light: #c084fc;
   --accent-purple: #ddd6fe;
   --purple-gradient: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 50%, #7c3aed 100%);
   --purple-gradient-hover: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #6d28d9 100%);
-  
-  /* Dark Backgrounds */
   --bg-primary: #0f172a;
   --bg-secondary: #1e293b;
   --bg-tertiary: #334155;
   --border-color: #475569;
-  
-  /* Dark Text Colors */
   --text-primary: #f8fafc;
   --text-secondary: #cbd5e1;
   --text-muted: #94a3b8;
-  
-  /* Dark Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  
-  /* Dark Glass Effect */
   --glass-bg: rgba(15, 23, 42, 0.8);
   --glass-border: rgba(148, 163, 184, 0.1);
   --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
-  
-  /* Legacy Color Variables (for compatibility) */
   --light-gray: var(--bg-secondary);
   --medium-gray: var(--border-color);
   --text-dark: var(--text-primary);
   --text-light: var(--text-secondary);
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 body {
   font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   line-height: 1.6;
@@ -105,7 +75,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
@@ -113,30 +82,23 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-primary);
   letter-spacing: -0.02em;
 }
-
-/* Code and technical elements */
 code, pre, .code-font {
   font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
   font-weight: 400;
 }
-
-/* Buttons and interactive elements */
 .btn {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   letter-spacing: 0.01em;
 }
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
-
 .section {
   padding: 5rem 0;
 }
-
 .section-subtitle {
   font-size: 1.2rem;
   color: var(--text-secondary);
@@ -148,8 +110,6 @@ code, pre, .code-font {
   line-height: 1.6;
   font-weight: 500;
 }
-
-/* Modern Button Styles */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -168,7 +128,6 @@ code, pre, .code-font {
   overflow: hidden;
   letter-spacing: 0.01em;
 }
-
 .btn::before {
   content: '';
   position: absolute;
@@ -179,37 +138,30 @@ code, pre, .code-font {
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left 0.5s;
 }
-
 .btn:hover::before {
   left: 100%;
 }
-
 .btn-primary {
   background: var(--purple-gradient);
   color: var(--white);
   box-shadow: var(--shadow);
 }
-
 .btn-primary:hover {
   background: var(--purple-gradient-hover);
   transform: translateY(-2px);
   box-shadow: var(--shadow-xl);
 }
-
 .btn-secondary {
   background: var(--bg-secondary);
   color: var(--text-primary);
   border: 1px solid var(--border-color);
   backdrop-filter: blur(10px);
 }
-
 .btn-secondary:hover {
   background: var(--bg-tertiary);
   transform: translateY(-1px);
   box-shadow: var(--shadow-lg);
 }
-
-/* Modern Card Styles */
 .card {
   background: var(--bg-primary);
   border: 1px solid var(--border-color);
@@ -220,7 +172,6 @@ code, pre, .code-font {
   position: relative;
   overflow: hidden;
 }
-
 .card::before {
   content: '';
   position: absolute;
@@ -232,143 +183,109 @@ code, pre, .code-font {
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
-
 .card:hover::before {
   transform: scaleX(1);
 }
-
 .card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-2xl);
   border-color: var(--primary-purple-light);
 }
-
-/* Glass Effect */
 .glass {
   background: var(--glass-bg);
   backdrop-filter: blur(10px);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
 }
-
-/* Animation Classes */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
 }
-
-/* Scroll-triggered animations */
 .fade-in-left {
   opacity: 0;
   transform: translateX(-50px);
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .fade-in-left.visible {
   opacity: 1;
   transform: translateX(0);
 }
-
 .fade-in-right {
   opacity: 0;
   transform: translateX(50px);
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .fade-in-right.visible {
   opacity: 1;
   transform: translateX(0);
 }
-
 .fade-in-up {
   opacity: 0;
   transform: translateY(50px);
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .fade-in-up.visible {
   opacity: 1;
   transform: translateY(0);
 }
-
 .scale-in {
   opacity: 0;
   transform: scale(0.8);
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .scale-in.visible {
   opacity: 1;
   transform: scale(1);
 }
-
-/* Staggered animations for lists */
 .stagger-item {
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .stagger-item.visible {
   opacity: 1;
   transform: translateY(0);
 }
-
 .stagger-item:nth-child(1) { transition-delay: 0.1s; }
 .stagger-item:nth-child(2) { transition-delay: 0.2s; }
 .stagger-item:nth-child(3) { transition-delay: 0.3s; }
 .stagger-item:nth-child(4) { transition-delay: 0.4s; }
 .stagger-item:nth-child(5) { transition-delay: 0.5s; }
 .stagger-item:nth-child(6) { transition-delay: 0.6s; }
-
-/* Floating Animation */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
 }
-
 .float {
   animation: float 3s ease-in-out infinite;
 }
-
-/* Pulse Animation */
 @keyframes pulse {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.05); }
 }
-
 .pulse {
   animation: pulse 2s ease-in-out infinite;
 }
-
-/* Typewriter cursor animation */
 @keyframes blink {
   0%, 50% { opacity: 1; }
   51%, 100% { opacity: 0; }
 }
-
 .cursor {
   animation: blink 1s infinite;
   color: var(--primary-purple);
   font-weight: bold;
 }
-
-/* Magnetic Effect for Interactive Elements */
 .magnetic {
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* Glow Effect */
 .glow {
   position: relative;
 }
-
 .glow::before {
   content: '';
   position: absolute;
@@ -382,17 +299,13 @@ code, pre, .code-font {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
 .glow:hover::before {
   opacity: 0.3;
 }
-
-/* Text Reveal Animation */
 .text-reveal {
   overflow: hidden;
   position: relative;
 }
-
 .text-reveal::after {
   content: '';
   position: absolute;
@@ -404,17 +317,13 @@ code, pre, .code-font {
   transform: translateX(-100%);
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .text-reveal.visible::after {
   transform: translateX(100%);
 }
-
-/* Loading Spinner */
 .loading-spinner {
   display: inline-block;
   position: relative;
 }
-
 .spinner-ring {
   box-sizing: border-box;
   display: block;
@@ -426,13 +335,10 @@ code, pre, .code-font {
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
-
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-
-/* Scroll to Top Button */
 .scroll-to-top {
   position: fixed;
   bottom: 2rem;
@@ -454,27 +360,21 @@ code, pre, .code-font {
   transform: translateY(20px);
   animation: fadeInUp 0.3s ease forwards;
 }
-
 .scroll-to-top:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-xl);
   background: var(--purple-gradient-hover);
 }
-
 .scroll-to-top svg {
   transition: transform 0.3s ease;
 }
-
 .scroll-to-top:hover svg {
   transform: translateY(-2px);
 }
-
-/* Morphing Background */
 .morphing-bg {
   position: relative;
   overflow: hidden;
 }
-
 .morphing-bg::before {
   content: '';
   position: absolute;
@@ -486,40 +386,31 @@ code, pre, .code-font {
   opacity: 0.05;
   animation: morph 8s ease-in-out infinite;
 }
-
 @keyframes morph {
   0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
   50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
 }
-
-/* Neon Text Effect */
 .neon-text {
   text-shadow: 
     0 0 1px var(--primary-purple),
     0 0 2px var(--primary-purple);
   animation: neon-pulse 4s ease-in-out infinite alternate;
 }
-
 @keyframes neon-pulse {
   from { text-shadow: 0 0 1px var(--primary-purple), 0 0 2px var(--primary-purple); }
   to { text-shadow: 0 0 0.5px var(--primary-purple), 0 0 1px var(--primary-purple); }
 }
-
-/* Responsive Design */
 @media (max-width: 768px) {
   .container {
     padding: 0 1rem;
   }
-  
   .section {
     padding: 3rem 0;
   }
-  
   .section-subtitle {
     font-size: 1.1rem;
     margin-bottom: 2.5rem;
   }
-  
   .btn {
     padding: 0.625rem 1.25rem;
     font-size: 0.9rem;
