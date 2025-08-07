@@ -49,26 +49,43 @@ The application will be available at `http://localhost:3000`.
 
 ## Deployment
 
-### GitHub Pages (Recommended)
+### GitHub Pages (Automatic)
 
 This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
 
-1. Push your code to the `main` branch
-2. The GitHub Actions workflow will automatically build and deploy to GitHub Pages
-3. Your site will be available at `https://tj88888.github.io/Portfolio`
+**Two deployment methods are available:**
 
-### Manual Deployment
+1. **Modern GitHub Pages (Recommended)**: Uses the new GitHub Pages deployment system
+   - Workflow: `.github/workflows/deploy.yml`
+   - Automatically triggered on push to `main`/`master` branch
+   - Also supports manual triggers via GitHub Actions tab
 
-If you prefer manual deployment:
+2. **Traditional gh-pages**: Uses the gh-pages branch method
+   - Workflow: `.github/workflows/deploy-gh-pages.yml`
+   - Alternative deployment method
+
+**To enable deployment:**
+
+1. Go to your repository Settings → Pages
+2. Set source to "GitHub Actions"
+3. Push your code to the `main` branch
+4. The workflow will automatically build and deploy
+
+**Manual trigger:**
+- Go to Actions tab in your repository
+- Select the deployment workflow
+- Click "Run workflow"
+
+### Local Development
 
 1. Build the project:
 ```bash
 npm run build
 ```
 
-2. Deploy to GitHub Pages:
+2. Test the build locally:
 ```bash
-npm run deploy
+npx serve -s build
 ```
 
 ## Project Structure
