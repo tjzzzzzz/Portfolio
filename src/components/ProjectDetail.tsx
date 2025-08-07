@@ -35,7 +35,7 @@ const ProjectDetail: React.FC = () => {
       details: 'Transform your server\'s performance with intelligent lag detection and automated mitigation. Advanced monitoring system that helps identify and resolve performance bottlenecks in real-time.',
       links: [{ text: 'BuiltByBit Resource', url: 'https://builtbybit.com/resources/lagscope-performance-monitoring.73513/' }],
       status: 'completed',
-      image: '/images/projects/logos/lagscope-logo.png',
+      image: './images/projects/logos/lagscope-logo.png',
       category: 'Minecraft'
     },
     'elitebans': {
